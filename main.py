@@ -52,7 +52,6 @@ if abs(percentage_difference)>=0:
 
     formatted_article=[f"{STOCK_NAME}: {up_down}{percentage_difference} %\n Headline:{article['title']}. \n Brief:{article['description']}"for article in three_article]
 
-    # Fetching hidden phone numbers
     TWILIO_PHONE = os.environ.get("TWILIO_PHONE")
     MY_PHONE = os.environ.get("MY_PHONE")
 
