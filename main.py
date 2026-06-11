@@ -2,7 +2,6 @@ import os
 import requests
 from twilio.rest import Client
 
-# Fetching hidden variables from the environment
 account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
 auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
 client = Client(account_sid, auth_token)
@@ -39,7 +38,7 @@ else:
     up_down="🔻"
 
 percentage_difference = round((difference / float(day_before_yesterday_closing_date)) * 100)
-if abs(percentage_difference)>0:
+if abs(percentage_difference)>=0:
 
     news_parameter={
         "apikey":news_API_KEY,
