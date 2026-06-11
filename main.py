@@ -48,7 +48,7 @@ if abs(percentage_difference)>=0:
     news_response.raise_for_status()
     news_data=news_response.json()["articles"]
 
-    three_article=news_data[:4]
+    three_article=news_data[:3]
 
     formatted_article=[f"{STOCK_NAME}: {up_down}{percentage_difference} %\n Headline:{article['title']}. \n Brief:{article['description']}"for article in three_article]
 
