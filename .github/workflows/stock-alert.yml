@@ -1,8 +1,6 @@
 name: Run Stock Alert
 
 on:
-  schedule:
-    - cron: "30 1 * * 1-5"
   workflow_dispatch:
 
 jobs:
